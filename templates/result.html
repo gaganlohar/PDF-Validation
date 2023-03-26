@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+
+    <!-- Novo Icon -->
+    <link href="{{ url_for('static', filename='img/Novo1.png')}}" rel="icon">
+    
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static', filename='css/style_result.css')}}" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="btn-group" >
+        
+        <a href="/">
+            <input class="button" type="submit", value="Home" >
+        </a>
+    
+        <a href="/check">
+            <input class="button" type="submit", value="Back" >
+        </a>
+    </div>
+
+
+    <div class="line" style="text-align:center;">
+        <article>
+            <p class='lineUp'>{{result1}}</p>
+    
+            <p class='lineUp'>{{result2}}</p>
+        
+            <p class='lineUp'>{{result3}}</p>
+        
+            <p class='lineUp'>{{result4}}</p>
+        </article>
+        
+    </div>
+
+    <!-- <p class='lineUp'>{{result1}}</p>
+    
+    <p class='lineUp'>{{result2}}</p>
+    
+    <p class='lineUp'>{{result3}}</p>
+    
+    <p class='lineUp'>{{result4}}</p> -->
+  
+
+    <div >
+        
+        <table class="center" >
+            <thead>
+                <tr>
+                    {% for col in column_names %}
+                    <th>{{col}}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            {% for row in row_data %}
+            <tr>
+                {% for row_ in row %}
+                <!-- {% if col == link_column %} -->
+                <td>
+                    <!-- <button type="submit" value={{ row_ }} name="person_id" form="patient_form" class="patient_button"> -->
+                        {{ row_ }}
+                    <!-- </button> -->
+                </td>
+                <!-- {% else %} -->
+                <td>{{row_}}</td>
+                <!-- {% endif %} -->
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        
+        </table>
+    </div>
+
+    <!-- <div class="scrollit">
+        
+        <table class="center">
+            <tr>
+                {% for col in column_names %}
+                <th>{{col}}</th>
+                {% endfor %}
+            </tr>
+            {% for row in row_data %}
+            <tr>
+                {% for col, row_ in zip(column_names, row) %}
+                {% if col == link_column %}
+                <td>
+                    
+                        {{ row_ }}
+                    
+                </td>
+                {% else %}
+                <td>{{row_}}</td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        
+        </table>
+    </div> -->
+
+    <!-- <div class="scrollit">
+        
+        <table class="center">
+            <tr>
+                {% for col in column_names %}
+                <th>{{col}}</th>
+                {% endfor %}
+            </tr>
+            {% for row in row_data %}
+            <tr>
+                {% for col, row_ in zip(column_names, row) %}
+                {% if col == link_column %}
+                <td>
+                    
+                        {{ row_ }}
+                    
+                </td>
+                {% else %}
+                <td>{{row_}}</td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        
+        </table>
+    </div> -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go To</title>
+
+    <!-- Novo Icon -->
+    <link href="{{ url_for('static', filename='img/Novo1.png')}}" rel="icon">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static', filename='css/style_upload.css')}}" rel="stylesheet">
+
+</head>
+<body>
+    <h1 style="text-align:center">Validating PDF File </h1>
+    <h2 class="an" style="text-align:center">{{file_name}}</h2>
+
+    <a target="_blank" href={{ url_for('static', filename='img/file_1.png')}} class="img">
+        <img src={{ url_for('static', filename='img/file_1.png')}} alt="Forest" class="center">
+    </a>
+
+    <br>
+
+    <div style="text-align:center;">
+        <a href="/check">
+            <input class="button" type="submit", value="Go to checks list" >
+        </a>
+    </div>
+    
+</body>
+</html>

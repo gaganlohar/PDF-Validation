@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+
+    <!-- Novo Icon -->
+    <link href="{{ url_for('static', filename='img/Novo1.png')}}" rel="icon">
+    
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static', filename='css/style_upload.css')}}" rel="stylesheet">
+</head>
+<body>
+    
+
+    <h1 class="an" style="text-align:center">Upload your PDF file</h1></p>
+    
+
+    <form action="/file_view" method="post" >
+
+        <label for="images" class="drop-container">
+            <span class="drop-title">Drop files here</span>
+            or
+            <input type="file" id="myFile" name="filename" required>
+        </label>
+
+        <br>
+        <br>
+
+        <div class="wrap">
+            <button class="button">Submit</button>
+        </div>
+        
+    </form>
+      
+    
+     
+</body>
+</html>
